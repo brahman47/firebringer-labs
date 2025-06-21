@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebringer Labs - Igniting Your AI Potential</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to supplement Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* bg-gray-900 */
+        }
+        .hero-glow {
+            text-shadow: 0 0 15px rgba(249, 115, 22, 0.5), 0 0 25px rgba(249, 115, 22, 0.3);
+        }
+        .section-fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .section-fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #particle-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <!-- Canvas for Animated Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+
+        <!-- Header -->
+        <header class="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-sm">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-white flex items-center">
+                    <svg class="w-8 h-8 mr-2 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v11.494m-5.747-8.247l11.494 4.994-4.994 11.494-1.506-1.506-4.994-11.494 1.506 1.506z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.636 5.636a9 9 0 1012.728 0M12 3v1m0 16v1m-8-9H3m18 0h-1m-4.243-4.243l-1-1m-8.514 0l1 1m0 8.514l-1 1m8.514 0l1-1"></path></svg>
+                    Firebringer Labs
+                </a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="hover:text-orange-500 transition-colors">Services</a>
+                    <a href="#edtech-suite" class="hover:text-orange-500 transition-colors">EdTech</a>
+                    <a href="#marketing" class="hover:text-orange-500 transition-colors">Marketing</a>
+                    <a href="#pricing" class="hover:text-orange-500 transition-colors">Pricing</a>
+                    <a href="#about" class="hover:text-orange-500 transition-colors">About</a>
+                    <a href="tel:+916380784140" class="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-4 rounded-lg transition-all">
+                        Let's Talk
+                    </a>
+                </nav>
+                <button class="md:hidden text-white">
+                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <main class="relative overflow-hidden">
+            <section class="h-screen flex items-center justify-center text-center">
+                <div class="container mx-auto px-6">
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight hero-glow">
+                        Harnessing AI to Ignite Your Potential.
+                    </h1>
+                    <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+                        We don't just provide services; we build your capacity to leverage state-of-the-art AI. We are your dedicated partners in technological empowerment and innovation.
+                    </p>
+                    <div class="mt-10">
+                        <a href="#services" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform hover:scale-105 inline-block">
+                            Explore Our AI Solutions
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="py-20 md:py-32 bg-gray-900 section-fade-in">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold text-white">Our Forge of AI-Powered Innovation</h2>
+                        <p class="text-gray-400 mt-4">We build the intelligent tools you need to thrive in the digital age.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Service Card 1 -->
+                        <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+                             <div class="bg-orange-600/20 text-orange-400 rounded-lg w-12 h-12 flex items-center justify-center mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Bespoke AI Solutions</h3>
+                            <p class="text-gray-400">From intelligent automation to predictive analytics, we build custom AI solutions that unlock efficiency and create new opportunities.</p>
+                        </div>
+                        <!-- Service Card 2 -->
+                        <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+                             <div class="bg-orange-600/20 text-orange-400 rounded-lg w-12 h-12 flex items-center justify-center mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 00-3-3.87" /><path d="M16 3.13a4 4 0 010 7.75" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">AI-Powered EdTech Platforms</h3>
+                            <p class="text-gray-400">We build entire e-learning ecosystems, complete with features like our AI-integrated online test engine for advanced, adaptive assessments.</p>
+                        </div>
+                        <!-- Service Card 3 -->
+                        <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+                             <div class="bg-orange-600/20 text-orange-400 rounded-lg w-12 h-12 flex items-center justify-center mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">AI Capacity Building</h3>
+                            <p class="text-gray-400">The most powerful tool is knowledge. We train your team to understand and leverage AI, turning your workforce into an engine of innovation.</p>
+                        </div>
+                         <!-- Service Card 4 -->
+                        <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+                             <div class="bg-orange-600/20 text-orange-400 rounded-lg w-12 h-12 flex items-center justify-center mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Web & App Development</h3>
+                            <p class="text-gray-400">Sleek, AI-ready websites and powerful web applications that capture your brand and engage your audience.</p>
+                        </div>
+                        <!-- Service Card 5 -->
+                        <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+                           <div class="bg-orange-600/20 text-orange-400 rounded-lg w-12 h-12 flex items-center justify-center mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Cloud Infrastructure</h3>
+                            <p class="text-gray-400">Scalable and secure cloud solutions, optimized to power your most demanding AI applications and services.</p>
+                        </div>
+                        <!-- Service Card 6 -->
+                        <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+                             <div class="bg-orange-600/20 text-orange-400 rounded-lg w-12 h-12 flex items-center justify-center mb-6">
+                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-2.236 9.168-5.514" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">AI-Driven Marketing</h3>
+                            <p class="text-gray-400">Strategic marketing powered by AI insights to build your brand, attract the right users, and drive exponential growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- EdTech Suite Section -->
+            <section id="edtech-suite" class="py-20 md:py-32 section-fade-in">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16 max-w-4xl mx-auto">
+                        <h2 class="text-3xl md:text-5xl font-bold text-white">
+                            <span class="text-orange-500">For Educational Institutions:</span><br/>The AI-Powered Digital Transformation
+                        </h2>
+                        <p class="text-gray-400 mt-6 text-lg">We use our deep EdTech and AI expertise to build intelligent learning environments that are more effective, engaging, and insightful than ever before.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Feature 1 -->
+                        <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+                            <h4 class="text-lg font-semibold text-white mb-2">AI-Powered Assessment</h4>
+                            <p class="text-gray-400">Deploy our intelligent test engine for dynamic question generation, performance analytics, and personalized feedback.</p>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+                            <h4 class="text-lg font-semibold text-white mb-2">Intelligent Content Crafting</h4>
+                            <p class="text-gray-400">Using AI, we help transform static notes into adaptive, interactive courseware that caters to individual learning styles.</p>
+                        </div>
+                        <!-- Feature 3 -->
+                        <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+                            <h4 class="text-lg font-semibold text-white mb-2">Custom LMS with AI Core</h4>
+                            <p class="text-gray-400">A bespoke Learning Management System with AI at its heart, built to enhance your specific pedagogical approach.</p>
+                        </div>
+                        <!-- Feature 4 -->
+                        <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+                            <h4 class="text-lg font-semibold text-white mb-2">Faculty & Student AI Training</h4>
+                            <p class="text-gray-400">Comprehensive onboarding to ensure your team and students are confident using the new AI-powered tools.</p>
+                        </div>
+                        <!-- Feature 5 -->
+                        <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+                            <h4 class="text-lg font-semibold text-white mb-2">Data-Driven Enrollment Strategy</h4>
+                            <p class="text-gray-400">We leverage AI to identify and target potential students, providing marketing direction for effective enrollment campaigns.</p>
+                        </div>
+                        <!-- Feature 6 -->
+                        <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+                            <h4 class="text-lg font-semibold text-white mb-2">Ongoing Strategic Support</h4>
+                            <p class="text-gray-400">Your success is our mission. We offer continuous technical support, consultation, and strategic direction for your digital campus.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Marketing Section -->
+            <section id="marketing" class="py-20 md:py-32 bg-gray-900 section-fade-in">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16 max-w-3xl mx-auto">
+                        <h2 class="text-4xl font-bold text-white">Your Voice, Amplified by AI</h2>
+                        <p class="text-gray-400 mt-4 text-lg">You know your institution best. We know how to get your message heard. Our marketing support is a partnership where we provide AI-driven strategy and content, while you maintain full control.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Step 1 -->
+                        <div class="bg-gray-800 p-8 rounded-xl text-center shadow-lg">
+                            <h3 class="text-xl font-bold text-white mb-3">1. AI-Driven Strategy</h3>
+                            <p class="text-gray-400">We use AI tools to analyze the market and identify your ideal audience, creating a custom marketing playbook full of data-backed ideas.</p>
+                        </div>
+                        <!-- Step 2 -->
+                         <div class="bg-gray-800 p-8 rounded-xl text-center shadow-lg">
+                            <h3 class="text-xl font-bold text-white mb-3">2. Content by Human Experts</h4>
+                            <p class="text-gray-400">Our team of educators and marketers crafts authentic content that resonates—blog posts, social media updates, and ad copy that speaks your audience's language.</p>
+                        </div>
+                        <!-- Step 3 -->
+                         <div class="bg-gray-800 p-8 rounded-xl text-center shadow-lg">
+                            <h3 class="text-xl font-bold text-white mb-3">3. Your Accounts, Your Control</h3>
+                            <p class="text-gray-400">We deliver the playbook and the content, but we never gatekeep. You execute the campaigns from your own accounts, with our guidance. Full transparency, full ownership.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Pricing Section -->
+            <section id="pricing" class="py-20 md:py-32 section-fade-in">
+                <div class="container mx-auto px-6">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <h2 class="text-4xl font-bold text-white">Pricing as a Partnership</h2>
+                        <p class="text-gray-400 mt-6 text-lg">There is no one-size-fits-all solution for innovation, and we definitely understand that. Your vision is unique, and your pricing should be too. Our philosophy is built on collaboration and radical transparency.</p>
+                        
+                        <div class="mt-10 bg-gray-800/50 p-8 rounded-2xl border border-gray-700 inline-block">
+                            <p class="text-xl text-white font-semibold">Our pricing is modular, catered to your individual needs.</p>
+                            <p class="text-gray-300 mt-4 max-w-2xl mx-auto">We want you in the process from the very beginning. We'll discuss your goals, explore the options, and build a strategy together. After all, it's your business—we're just the tool bringers. You will always own your accounts and pay for infrastructure directly, with no hidden markups from us. What we build for you is yours. Completely.</p>
+                             <p class="text-orange-400 italic mt-6">Have special requirements? We can make it happen.</p>
+                            <div class="mt-8">
+                                <a href="tel:+916380784140" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform hover:scale-105 inline-block">
+                                    Let's Discuss Your Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+             <section id="about" class="py-20 md:py-32 bg-gray-900 section-fade-in">
+                 <div class="container mx-auto px-6">
+                    <div class="flex flex-col md:flex-row items-center gap-12">
+                        <div class="md:w-1/2">
+                            <h2 class="text-4xl font-bold text-white">Built by AI Experts & Educators</h2>
+                            <p class="text-gray-400 mt-6 text-lg">Firebringer Labs was founded on a simple principle: technology is a tool of empowerment. We believe access to powerful digital tools can unlock unprecedented growth for organizations.</p>
+                            <p class="text-gray-400 mt-4 text-lg">Our team is a unique blend of NIT-alumni developers specializing in AI, designers, and strategists, joined by veteran educators from industry giants like Byju's and Vedantu. This fusion of premier AI expertise and deep, first-hand educational experience means we don't just build technology; we build solutions because we understand precisely what an institution needs to succeed online.</p>
+                            <p class="text-gray-400 mt-4 text-lg">Our lab is a space for collaboration, where we forge strong partnerships with our clients to turn ambitious ideas into reality.</p>
+                        </div>
+                        <div class="md:w-1/2">
+                           <img src="https://placehold.co/600x400/1f2937/f97316?text=Our+Team" alt="A diverse team of educators and developers" class="rounded-xl shadow-2xl w-full">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- CTA Section -->
+            <section id="contact" class="py-20 md:py-32 section-fade-in">
+                <div class="container mx-auto px-6 text-center">
+                    <h2 class="text-4xl font-bold text-white">Ready to Build Your AI-Powered Future?</h2>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Let's talk about how Firebringer Labs can help you harness the power of AI. Your next big project starts with a simple conversation.</p>
+                    <a href="tel:+916380784140" class="mt-8 bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform hover:scale-105 inline-block">
+                        Let's Talk
+                    </a>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="bg-gray-900 border-t border-gray-800">
+            <div class="container mx-auto px-6 py-8 text-center">
+                 <p class="text-gray-400">&copy; 2025 Firebringer Labs. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // --- Particle Animation Script ---
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let animationFrameId;
+
+        function resizeCanvas() {
+            // Cancel the previous animation frame to avoid multiple loops on resize
+            if(animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
+            canvas.width = window.innerWidth;
+            // Make canvas as tall as the whole page content for a complete effect
+            canvas.height = document.body.scrollHeight; 
+            initParticles();
+            animate();
+        }
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.speedX = Math.random() * 1 - 0.5;
+                this.speedY = Math.random() * 1 - 0.5;
+                this.color = `rgba(249, 115, 22, ${Math.random() * 0.8})`; // Orange-500 with random alpha
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                // Shrink particles over time
+                if (this.size > 0.1) this.size -= 0.01;
+
+                // Bounce off edges
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            }
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            // Adjust particle count based on screen size for better performance
+            const particleCount = Math.floor((canvas.width * canvas.height) / 12000);
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            animationFrameId = requestAnimationFrame(animate);
+        }
+
+        // Use a ResizeObserver for more reliable resize detection, especially for dynamic content
+        const resizeObserver = new ResizeObserver(entries => {
+            // We are only observing one element, so we can just grab the first one
+            resizeCanvas();
+        });
+
+        // Observe the body for changes in size
+        resizeObserver.observe(document.body);
+
+        // Initial setup
+        resizeCanvas();
+        
+        // --- Scroll Fade-in Animation ---
+        const sections = document.querySelectorAll('.section-fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Optional: unobserve after it's visible to save resources
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+    </script>
+</body>
+</html>
