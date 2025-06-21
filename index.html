@@ -55,6 +55,7 @@
                     <svg class="w-8 h-8 mr-2 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v11.494m-5.747-8.247l11.494 4.994-4.994 11.494-1.506-1.506-4.994-11.494 1.506 1.506z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.636 5.636a9 9 0 1012.728 0M12 3v1m0 16v1m-8-9H3m18 0h-1m-4.243-4.243l-1-1m-8.514 0l1 1m0 8.514l-1 1m8.514 0l1-1"></path></svg>
                     Firebringer Labs
                 </a>
+                <!-- Desktop Menu -->
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="#services" class="hover:text-orange-500 transition-colors">Services</a>
                     <a href="#edtech-suite" class="hover:text-orange-500 transition-colors">EdTech</a>
@@ -65,11 +66,27 @@
                         Let's Talk
                     </a>
                 </nav>
-                <button class="md:hidden text-white">
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-white">
                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </header>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden fixed top-0 left-0 w-full h-screen bg-gray-900 z-40">
+            <nav class="flex flex-col items-center justify-center h-full space-y-8 text-2xl">
+                <a href="#services" class="mobile-menu-link hover:text-orange-500 transition-colors">Services</a>
+                <a href="#edtech-suite" class="mobile-menu-link hover:text-orange-500 transition-colors">EdTech</a>
+                <a href="#marketing" class="mobile-menu-link hover:text-orange-500 transition-colors">Marketing</a>
+                <a href="#pricing" class="mobile-menu-link hover:text-orange-500 transition-colors">Pricing</a>
+                <a href="#about" class="mobile-menu-link hover:text-orange-500 transition-colors">About</a>
+                <a href="tel:+916380784140" class="mobile-menu-link bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-all">
+                    Let's Talk
+                </a>
+            </nav>
+        </div>
+
 
         <!-- Hero Section -->
         <main class="relative overflow-hidden">
@@ -281,6 +298,22 @@
     </div>
 
     <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close the menu when a link is clicked
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
         // --- Particle Animation Script ---
         const canvas = document.getElementById('particle-canvas');
         const ctx = canvas.getContext('2d');
